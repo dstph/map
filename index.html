@@ -31,7 +31,7 @@
             const locations = await response.json();
             let zoom = true;
 
-            document.addEventListener('DOMContentLoaded', function () {
+            (function () {
                 let map = new L.Map('map', {
                     center: new L.LatLng(50.455002, 30.511284),
                     zoom: 9,
@@ -81,7 +81,7 @@
                         console.log(suggest),
                     customFeatures: locations
                 });
-            });
+            })();
         })();
     </script>
 </body>
